@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Tests/1.0.0": {
         "dependencies": {
-          "GitHub.Octokit.GHES.SDK.": "0.0.1-alpha",
+          "GitHub.Octokit.GHES.SDK.3.10": "0.0.1-alpha",
           "Microsoft.NET.Test.Sdk": "17.9.0",
           "Moq": "4.20.70",
           "coverlet.collector": "6.0.1",
@@ -576,7 +576,7 @@
         }
       },
       "xunit.runner.visualstudio/2.5.7": {},
-      "GitHub.Octokit.GHES.SDK./0.0.1-alpha": {
+      "GitHub.Octokit.GHES.SDK.3.10/0.0.1-alpha": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "7.5.1",
           "Microsoft.Kiota.Abstractions": "1.8.4",
@@ -894,7 +894,7 @@
       "path": "xunit.runner.visualstudio/2.5.7",
       "hashPath": "xunit.runner.visualstudio.2.5.7.nupkg.sha512"
     },
-    "GitHub.Octokit.GHES.SDK./0.0.1-alpha": {
+    "GitHub.Octokit.GHES.SDK.3.10/0.0.1-alpha": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PublishAot>true</PublishAot>
-    <PackageId>GitHub.Octokit.GHES.SDK.</PackageId>
+    <PackageId>GitHub.Octokit.GHES.SDK.3.10</PackageId>
     <Version>0.0.1-alpha</Version>
     <NuGetVersion>0.0.1-alpha</NuGetVersion>
     <Title>Octokit</Title>
