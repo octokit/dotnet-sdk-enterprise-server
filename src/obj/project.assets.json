@@ -975,7 +975,7 @@
     "version": "0.0.1-alpha",
     "restore": {
       "projectUniqueName": "/home/runner/work/source-generator/source-generator/stage/dotnet/dotnet-sdk-enterprise-server/src/GitHub.Octokit.GHES.SDK.csproj",
-      "projectName": "GitHub.Octokit.GHES.SDK.",
+      "projectName": "GitHub.Octokit.GHES.SDK.3.12",
       "projectPath": "/home/runner/work/source-generator/source-generator/stage/dotnet/dotnet-sdk-enterprise-server/src/GitHub.Octokit.GHES.SDK.csproj",
       "packagesPath": "/home/runner/.nuget/packages/",
       "outputPath": "/home/runner/work/source-generator/source-generator/stage/dotnet/dotnet-sdk-enterprise-server/src/obj/",
