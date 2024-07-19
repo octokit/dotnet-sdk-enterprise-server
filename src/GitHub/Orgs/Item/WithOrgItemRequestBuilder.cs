@@ -18,8 +18,6 @@ using GitHub.Orgs.Item.Item;
 using GitHub.Orgs.Item.Members;
 using GitHub.Orgs.Item.Memberships;
 using GitHub.Orgs.Item.Migrations;
-using GitHub.Orgs.Item.OrganizationFineGrainedPermissions;
-using GitHub.Orgs.Item.OrganizationRoles;
 using GitHub.Orgs.Item.Outside_collaborators;
 using GitHub.Orgs.Item.Packages;
 using GitHub.Orgs.Item.PersonalAccessTokenRequests;
@@ -133,16 +131,6 @@ namespace GitHub.Orgs.Item {
         public MigrationsRequestBuilder Migrations
         {
             get => new MigrationsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The organizationFineGrainedPermissions property</summary>
-        public OrganizationFineGrainedPermissionsRequestBuilder OrganizationFineGrainedPermissions
-        {
-            get => new OrganizationFineGrainedPermissionsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The organizationRoles property</summary>
-        public OrganizationRolesRequestBuilder OrganizationRoles
-        {
-            get => new OrganizationRolesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The outside_collaborators property</summary>
         public Outside_collaboratorsRequestBuilder Outside_collaborators
