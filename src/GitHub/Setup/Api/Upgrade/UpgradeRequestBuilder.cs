@@ -30,7 +30,7 @@ namespace GitHub.Setup.Api.Upgrade {
         {
         }
         /// <summary>
-        /// This API upgrades your license and also triggers the configuration process.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// This API upgrades your license and also triggers the configuration process.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/management-console#upgrade-a-license" />
         /// </summary>
         /// <param name="body">The request body</param>
@@ -50,7 +50,7 @@ namespace GitHub.Setup.Api.Upgrade {
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This API upgrades your license and also triggers the configuration process.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// This API upgrades your license and also triggers the configuration process.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

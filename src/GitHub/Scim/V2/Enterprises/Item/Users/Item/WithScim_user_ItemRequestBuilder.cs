@@ -31,7 +31,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
         {
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Permanently suspends a SCIM user from an enterprise, removes all data for the user, obfuscates the login, email, and display name of the user, removes all external-identity SCIM attributes, and deletes the emails, avatar, PATs, SSH keys, OAuth authorizations credentials, GPG keys, and SAML mappings for the user. You will not be able to undo this action.
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Permanently suspends a SCIM user from an enterprise, removes all data for the user, obfuscates the login, email, and display name of the user, removes all external-identity SCIM attributes, and deletes the emails, avatar, PATs, SSH keys, OAuth authorizations credentials, GPG keys, and SAML mappings for the user. You will not be able to undo this action.
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#delete-a-scim-user-from-an-enterprise" />
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -60,7 +60,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Gets information about a SCIM user.
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Gets information about a SCIM user.
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#get-scim-provisioning-information-for-an-enterprise-user" />
         /// </summary>
         /// <returns>A <see cref="ScimEnterpriseUserResponse"/></returns>
@@ -90,7 +90,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             return await RequestAdapter.SendAsync<ScimEnterpriseUserResponse>(requestInfo, ScimEnterpriseUserResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Update a provisioned user&apos;s individual attributes.To change a user&apos;s values, you must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`, or `replace` operations. For examples and more information on the SCIM operations format, see the [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).**Note:** Complicated SCIM `path` selectors that include filters are not supported. For example, a `path` selector defined as `&quot;path&quot;: &quot;emails[type eq \&quot;work\&quot;]&quot;` will not work.**Warning:** Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.```{  &quot;Operations&quot;:[{    &quot;op&quot;:&quot;replace&quot;,    &quot;value&quot;:{      &quot;active&quot;:false    }  }]}```
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Update a provisioned user&apos;s individual attributes.To change a user&apos;s values, you must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`, or `replace` operations. For examples and more information on the SCIM operations format, see the [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).&gt; [!NOTE]&gt; Complicated SCIM `path` selectors that include filters are not supported. For example, a `path` selector defined as `&quot;path&quot;: &quot;emails[type eq \&quot;work\&quot;]&quot;` will not work.&gt; [!WARNING]&gt; Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.&gt; ```&gt; {&gt;   &quot;Operations&quot;:[{&gt;     &quot;op&quot;:&quot;replace&quot;,&gt;     &quot;value&quot;:{&gt;       &quot;active&quot;:false&gt;     }&gt;   }]&gt; }&gt; ```
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#update-an-attribute-for-a-scim-enterprise-user" />
         /// </summary>
         /// <returns>A <see cref="ScimEnterpriseUserResponse"/></returns>
@@ -122,7 +122,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             return await RequestAdapter.SendAsync<ScimEnterpriseUserResponse>(requestInfo, ScimEnterpriseUserResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Replaces an existing provisioned user&apos;s information.You must provide all the information required for the user as if you were provisioning them for the first time. Any existing user information that you don&apos;t provide will be removed. If you want to only update a specific attribute, use the [Update an attribute for a SCIM user](#update-an-attribute-for-a-scim-enterprise-user) endpoint instead.**Warning:** Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Replaces an existing provisioned user&apos;s information.You must provide all the information required for the user as if you were provisioning them for the first time. Any existing user information that you don&apos;t provide will be removed. If you want to only update a specific attribute, use the [Update an attribute for a SCIM user](#update-an-attribute-for-a-scim-enterprise-user) endpoint instead.&gt; [!WARNING]&gt; Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/enterprise-admin/scim#set-scim-information-for-a-provisioned-enterprise-user" />
         /// </summary>
         /// <returns>A <see cref="ScimEnterpriseUserResponse"/></returns>
@@ -154,7 +154,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             return await RequestAdapter.SendAsync<ScimEnterpriseUserResponse>(requestInfo, ScimEnterpriseUserResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Permanently suspends a SCIM user from an enterprise, removes all data for the user, obfuscates the login, email, and display name of the user, removes all external-identity SCIM attributes, and deletes the emails, avatar, PATs, SSH keys, OAuth authorizations credentials, GPG keys, and SAML mappings for the user. You will not be able to undo this action.
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Permanently suspends a SCIM user from an enterprise, removes all data for the user, obfuscates the login, email, and display name of the user, removes all external-identity SCIM attributes, and deletes the emails, avatar, PATs, SSH keys, OAuth authorizations credentials, GPG keys, and SAML mappings for the user. You will not be able to undo this action.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -173,7 +173,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             return requestInfo;
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Gets information about a SCIM user.
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Gets information about a SCIM user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -192,7 +192,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             return requestInfo;
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Update a provisioned user&apos;s individual attributes.To change a user&apos;s values, you must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`, or `replace` operations. For examples and more information on the SCIM operations format, see the [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).**Note:** Complicated SCIM `path` selectors that include filters are not supported. For example, a `path` selector defined as `&quot;path&quot;: &quot;emails[type eq \&quot;work\&quot;]&quot;` will not work.**Warning:** Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.```{  &quot;Operations&quot;:[{    &quot;op&quot;:&quot;replace&quot;,    &quot;value&quot;:{      &quot;active&quot;:false    }  }]}```
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Update a provisioned user&apos;s individual attributes.To change a user&apos;s values, you must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`, or `replace` operations. For examples and more information on the SCIM operations format, see the [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).&gt; [!NOTE]&gt; Complicated SCIM `path` selectors that include filters are not supported. For example, a `path` selector defined as `&quot;path&quot;: &quot;emails[type eq \&quot;work\&quot;]&quot;` will not work.&gt; [!WARNING]&gt; Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.&gt; ```&gt; {&gt;   &quot;Operations&quot;:[{&gt;     &quot;op&quot;:&quot;replace&quot;,&gt;     &quot;value&quot;:{&gt;       &quot;active&quot;:false&gt;     }&gt;   }]&gt; }&gt; ```
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -214,7 +214,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users.Item {
             return requestInfo;
         }
         /// <summary>
-        /// **Note:** The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Replaces an existing provisioned user&apos;s information.You must provide all the information required for the user as if you were provisioning them for the first time. Any existing user information that you don&apos;t provide will be removed. If you want to only update a specific attribute, use the [Update an attribute for a SCIM user](#update-an-attribute-for-a-scim-enterprise-user) endpoint instead.**Warning:** Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.
+        /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Replaces an existing provisioned user&apos;s information.You must provide all the information required for the user as if you were provisioning them for the first time. Any existing user information that you don&apos;t provide will be removed. If you want to only update a specific attribute, use the [Update an attribute for a SCIM user](#update-an-attribute-for-a-scim-enterprise-user) endpoint instead.&gt; [!WARNING]&gt; Setting `active: false` will suspend a user and obfuscate the user handle and user email. Since the implementation is a generic SCIM implementation and does not differentiate yet between different IdP providers, for Okta, the user GDPR data will not be purged and the credentials will not be removed.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
