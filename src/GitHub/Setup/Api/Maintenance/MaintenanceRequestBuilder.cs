@@ -50,7 +50,7 @@ namespace GitHub.Setup.Api.Maintenance {
             return await RequestAdapter.SendAsync<MaintenanceStatus>(requestInfo, MaintenanceStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// **Note:** The request body for this operation must be submitted as `application/x-www-form-urlencoded` data. You can submit a parameter value as a string, or you can use a tool such as `curl` to submit a parameter value as the contents of a text file. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#--data-urlencode).
+        /// &gt; [!NOTE]&gt; The request body for this operation must be submitted as `application/x-www-form-urlencoded` data. You can submit a parameter value as a string, or you can use a tool such as `curl` to submit a parameter value as the contents of a text file. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#--data-urlencode).
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.10/rest/enterprise-admin/management-console#enable-or-disable-maintenance-mode" />
         /// </summary>
         /// <returns>A <see cref="MaintenanceStatus"/></returns>
@@ -90,7 +90,7 @@ namespace GitHub.Setup.Api.Maintenance {
             return requestInfo;
         }
         /// <summary>
-        /// **Note:** The request body for this operation must be submitted as `application/x-www-form-urlencoded` data. You can submit a parameter value as a string, or you can use a tool such as `curl` to submit a parameter value as the contents of a text file. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#--data-urlencode).
+        /// &gt; [!NOTE]&gt; The request body for this operation must be submitted as `application/x-www-form-urlencoded` data. You can submit a parameter value as a string, or you can use a tool such as `curl` to submit a parameter value as the contents of a text file. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#--data-urlencode).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
