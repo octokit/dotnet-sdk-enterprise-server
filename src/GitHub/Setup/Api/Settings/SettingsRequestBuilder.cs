@@ -37,7 +37,7 @@ namespace GitHub.Setup.Api.Settings {
         {
         }
         /// <summary>
-        /// Gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#set-settings).**Note:** You cannot retrieve the management console password with the Enterprise administration API.
+        /// Gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#set-settings).&gt; [!NOTE]&gt; You cannot retrieve the management console password with the Enterprise administration API.
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#get-settings" />
         /// </summary>
         /// <returns>A <see cref="EnterpriseSettings"/></returns>
@@ -76,7 +76,7 @@ namespace GitHub.Setup.Api.Settings {
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#set-settings).**Note:** You cannot retrieve the management console password with the Enterprise administration API.
+        /// Gets the settings for your instance. To change settings, see the [Set settings endpoint](https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/management-console#set-settings).&gt; [!NOTE]&gt; You cannot retrieve the management console password with the Enterprise administration API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
