@@ -56,7 +56,7 @@ namespace GitHub.Manage.V1.Config.License {
             return await RequestAdapter.SendAsync<GhesLicenseInfo>(requestInfo, GhesLicenseInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Uploads an enterprise license. This operation does not automatically activate the license.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// Uploads an enterprise license. This operation does not automatically activate the license.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#upload-an-enterprise-license" />
         /// </summary>
         /// <returns>A List&lt;GhesLicenseUpload&gt;</returns>
@@ -97,7 +97,7 @@ namespace GitHub.Manage.V1.Config.License {
             return requestInfo;
         }
         /// <summary>
-        /// Uploads an enterprise license. This operation does not automatically activate the license.**Note:** The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// Uploads an enterprise license. This operation does not automatically activate the license.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Binary request body</param>
