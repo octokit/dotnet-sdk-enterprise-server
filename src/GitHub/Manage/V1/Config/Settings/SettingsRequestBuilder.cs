@@ -32,7 +32,7 @@ namespace GitHub.Manage.V1.Config.Settings {
         }
         /// <summary>
         /// Gets a list of settings for a GitHub Enterprise Server instance.
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#get-settings" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#get-the-ghes-settings" />
         /// </summary>
         /// <returns>A <see cref="GhesGetSettings"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
