@@ -32,7 +32,7 @@ namespace GitHub.Manage.V1.Checks.SystemRequirements {
         }
         /// <summary>
         /// Checks if the minimum requirements for system hardware resources are met on each configured cluster node.This endpoint may take several seconds to reply.
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-system-requirements-check-results-on-configured-nodes" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-the-system-requirement-check-results-for-configured-cluster-nodes" />
         /// </summary>
         /// <returns>A <see cref="GhesChecksSystemRequirements"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>

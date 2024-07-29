@@ -37,7 +37,7 @@ namespace GitHub.Manage.V1.Config.Apply {
         }
         /// <summary>
         /// Displays the current status of `ghe-config-apply` in the environment or the status of a historical run by ID.
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-config-apply-status" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-the-status-of-a-ghe-config-apply-run" />
         /// </summary>
         /// <returns>A <see cref="ApplyGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -56,7 +56,7 @@ namespace GitHub.Manage.V1.Config.Apply {
         }
         /// <summary>
         /// Triggers a run of `ghe-config-apply` from the `ghes-manage` agent on your Nomad Delegate instance.You can provide a run ID or allow one to be generated randomly.
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#run-config-apply" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#trigger-a-ghe-config-apply-run" />
         /// </summary>
         /// <returns>A <see cref="ApplyPostResponse"/></returns>
         /// <param name="body">The request body</param>
