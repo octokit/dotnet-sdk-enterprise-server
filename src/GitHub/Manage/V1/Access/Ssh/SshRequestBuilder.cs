@@ -32,7 +32,7 @@ namespace GitHub.Manage.V1.Access.Ssh {
         }
         /// <summary>
         /// Deletes a SSH key from the `authorized_keys` file for your GitHub Enterprise Server instance. This will remove access via SSH to your instance. For more information, see &quot;[Accessing the administrative shell (SSH)](https://docs.github.com/enterprise-server@3.12/admin/administering-your-instance/administering-your-instance-from-the-command-line/accessing-the-administrative-shell-ssh).&quot;
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#delete-ssh-key" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#delete-a-ssh-key" />
         /// </summary>
         /// <returns>A List&lt;GhesDeleteSshResponse&gt;</returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace GitHub.Manage.V1.Access.Ssh {
         }
         /// <summary>
         /// Gets the configured SSH keys on all available nodes. For more information, see &quot;[Accessing the administrative shell (SSH)](https://docs.github.com/enterprise-server@3.12/admin/administering-your-instance/administering-your-instance-from-the-command-line/accessing-the-administrative-shell-ssh).&quot;
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-ssh-keys" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#get-the-configured-ssh-keys" />
         /// </summary>
         /// <returns>A List&lt;GhesGetSsh&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -74,7 +74,7 @@ namespace GitHub.Manage.V1.Access.Ssh {
         }
         /// <summary>
         /// Adds a SSH key to the `authorized_keys` file for your GitHub Enterprise Server instance. This will grant access via SSH to your instance. For more information, see &quot;[Accessing the administrative shell (SSH)](https://docs.github.com/enterprise-server@3.12/admin/administering-your-instance/administering-your-instance-from-the-command-line/accessing-the-administrative-shell-ssh).&quot;
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#set-ssh-key" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.12/rest/enterprise-admin/manage-ghes#set-a-new-ssh-key" />
         /// </summary>
         /// <returns>A List&lt;GhesSetSshResponse&gt;</returns>
         /// <param name="body">The request body</param>
