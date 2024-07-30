@@ -31,7 +31,7 @@ namespace GitHub.Manage.V1.Config.Apply.Events {
         }
         /// <summary>
         /// Lists events from an in-process `ghe-config-apply` run on your Github Enterprise Server instance.
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#get-config-apply-events" />
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.13/rest/enterprise-admin/manage-ghes#list-events-from-ghe-config-apply" />
         /// </summary>
         /// <returns>A <see cref="EventsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
