@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - 3.13
-
 jobs:
   build:
     runs-on: ubuntu-latest
