@@ -10,24 +10,8 @@ namespace GitHub.Models {
     /// </summary>
     public class ApiOverview : IAdditionalDataHolder, IParsable 
     {
-        /// <summary>The actions_macos property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? ActionsMacos { get; set; }
-#nullable restore
-#else
-        public List<string> ActionsMacos { get; set; }
-#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The dependabot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? Dependabot { get; set; }
-#nullable restore
-#else
-        public List<string> Dependabot { get; set; }
-#endif
         /// <summary>The domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,8 +63,6 @@ namespace GitHub.Models {
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                {"actions_macos", n => { ActionsMacos = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-                {"dependabot", n => { Dependabot = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 {"domains", n => { Domains = n.GetObjectValue<ApiOverview_domains>(ApiOverview_domains.CreateFromDiscriminatorValue); } },
                 {"installed_version", n => { InstalledVersion = n.GetStringValue(); } },
                 {"packages", n => { Packages = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
@@ -94,8 +76,6 @@ namespace GitHub.Models {
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("actions_macos", ActionsMacos);
-            writer.WriteCollectionOfPrimitiveValues<string>("dependabot", Dependabot);
             writer.WriteObjectValue<ApiOverview_domains>("domains", Domains);
             writer.WriteStringValue("installed_version", InstalledVersion);
             writer.WriteCollectionOfPrimitiveValues<string>("packages", Packages);
