@@ -7,67 +7,69 @@ using GitHub.Enterprises.Item.Dependabot;
 using GitHub.Enterprises.Item.Item;
 using GitHub.Enterprises.Item.SecretScanning;
 using GitHub.Enterprises.Item.Settings;
+using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System;
-namespace GitHub.Enterprises.Item {
+namespace GitHub.Enterprises.Item
+{
     /// <summary>
     /// Builds and executes requests for operations under \enterprises\{enterprise}
     /// </summary>
-    public class WithEnterpriseItemRequestBuilder : BaseRequestBuilder 
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.17.0")]
+    public partial class WithEnterpriseItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The actions property</summary>
-        public ActionsRequestBuilder Actions
+        public global::GitHub.Enterprises.Item.Actions.ActionsRequestBuilder Actions
         {
-            get => new ActionsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.Actions.ActionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The auditLog property</summary>
-        public AuditLogRequestBuilder AuditLog
+        public global::GitHub.Enterprises.Item.AuditLog.AuditLogRequestBuilder AuditLog
         {
-            get => new AuditLogRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.AuditLog.AuditLogRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The code_security_and_analysis property</summary>
-        public Code_security_and_analysisRequestBuilder Code_security_and_analysis
+        public global::GitHub.Enterprises.Item.Code_security_and_analysis.Code_security_and_analysisRequestBuilder Code_security_and_analysis
         {
-            get => new Code_security_and_analysisRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.Code_security_and_analysis.Code_security_and_analysisRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The codeScanning property</summary>
-        public CodeScanningRequestBuilder CodeScanning
+        public global::GitHub.Enterprises.Item.CodeScanning.CodeScanningRequestBuilder CodeScanning
         {
-            get => new CodeScanningRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.CodeScanning.CodeScanningRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dependabot property</summary>
-        public DependabotRequestBuilder Dependabot
+        public global::GitHub.Enterprises.Item.Dependabot.DependabotRequestBuilder Dependabot
         {
-            get => new DependabotRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.Dependabot.DependabotRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The secretScanning property</summary>
-        public SecretScanningRequestBuilder SecretScanning
+        public global::GitHub.Enterprises.Item.SecretScanning.SecretScanningRequestBuilder SecretScanning
         {
-            get => new SecretScanningRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.SecretScanning.SecretScanningRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The settings property</summary>
-        public SettingsRequestBuilder Settings
+        public global::GitHub.Enterprises.Item.Settings.SettingsRequestBuilder Settings
         {
-            get => new SettingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprises.Item.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the GitHub.enterprises.item.item collection</summary>
         /// <param name="position">The security feature to enable or disable.</param>
-        /// <returns>A <see cref="WithSecurity_productItemRequestBuilder"/></returns>
-        public WithSecurity_productItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::GitHub.Enterprises.Item.Item.WithSecurity_productItemRequestBuilder"/></returns>
+        public global::GitHub.Enterprises.Item.Item.WithSecurity_productItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("security_product", position);
-                return new WithSecurity_productItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::GitHub.Enterprises.Item.Item.WithSecurity_productItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="WithEnterpriseItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Enterprises.Item.WithEnterpriseItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -75,7 +77,7 @@ namespace GitHub.Enterprises.Item {
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="WithEnterpriseItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Enterprises.Item.WithEnterpriseItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
