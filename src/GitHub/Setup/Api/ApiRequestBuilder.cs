@@ -5,50 +5,52 @@ using GitHub.Setup.Api.Maintenance;
 using GitHub.Setup.Api.Settings;
 using GitHub.Setup.Api.Start;
 using GitHub.Setup.Api.Upgrade;
+using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System;
-namespace GitHub.Setup.Api {
+namespace GitHub.Setup.Api
+{
     /// <summary>
     /// Builds and executes requests for operations under \setup\api
     /// </summary>
-    public class ApiRequestBuilder : BaseRequestBuilder 
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.17.0")]
+    public partial class ApiRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The configcheck property</summary>
-        public ConfigcheckRequestBuilder Configcheck
+        public global::GitHub.Setup.Api.Configcheck.ConfigcheckRequestBuilder Configcheck
         {
-            get => new ConfigcheckRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Setup.Api.Configcheck.ConfigcheckRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The configure property</summary>
-        public ConfigureRequestBuilder Configure
+        public global::GitHub.Setup.Api.Configure.ConfigureRequestBuilder Configure
         {
-            get => new ConfigureRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Setup.Api.Configure.ConfigureRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The maintenance property</summary>
-        public MaintenanceRequestBuilder Maintenance
+        public global::GitHub.Setup.Api.Maintenance.MaintenanceRequestBuilder Maintenance
         {
-            get => new MaintenanceRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Setup.Api.Maintenance.MaintenanceRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The settings property</summary>
-        public SettingsRequestBuilder Settings
+        public global::GitHub.Setup.Api.Settings.SettingsRequestBuilder Settings
         {
-            get => new SettingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Setup.Api.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The start property</summary>
-        public StartRequestBuilder Start
+        public global::GitHub.Setup.Api.Start.StartRequestBuilder Start
         {
-            get => new StartRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Setup.Api.Start.StartRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The upgrade property</summary>
-        public UpgradeRequestBuilder Upgrade
+        public global::GitHub.Setup.Api.Upgrade.UpgradeRequestBuilder Upgrade
         {
-            get => new UpgradeRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Setup.Api.Upgrade.UpgradeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="ApiRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Setup.Api.ApiRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -56,7 +58,7 @@ namespace GitHub.Setup.Api {
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="ApiRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Setup.Api.ApiRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

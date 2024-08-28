@@ -4,45 +4,47 @@ using GitHub.Manage.V1.Config.Init;
 using GitHub.Manage.V1.Config.License;
 using GitHub.Manage.V1.Config.Nodes;
 using GitHub.Manage.V1.Config.Settings;
+using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System;
-namespace GitHub.Manage.V1.Config {
+namespace GitHub.Manage.V1.Config
+{
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\config
     /// </summary>
-    public class ConfigRequestBuilder : BaseRequestBuilder 
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.17.0")]
+    public partial class ConfigRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The apply property</summary>
-        public ApplyRequestBuilder Apply
+        public global::GitHub.Manage.V1.Config.Apply.ApplyRequestBuilder Apply
         {
-            get => new ApplyRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Manage.V1.Config.Apply.ApplyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The init property</summary>
-        public InitRequestBuilder Init
+        public global::GitHub.Manage.V1.Config.Init.InitRequestBuilder Init
         {
-            get => new InitRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Manage.V1.Config.Init.InitRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The license property</summary>
-        public LicenseRequestBuilder License
+        public global::GitHub.Manage.V1.Config.License.LicenseRequestBuilder License
         {
-            get => new LicenseRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Manage.V1.Config.License.LicenseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The nodes property</summary>
-        public NodesRequestBuilder Nodes
+        public global::GitHub.Manage.V1.Config.Nodes.NodesRequestBuilder Nodes
         {
-            get => new NodesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Manage.V1.Config.Nodes.NodesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The settings property</summary>
-        public SettingsRequestBuilder Settings
+        public global::GitHub.Manage.V1.Config.Settings.SettingsRequestBuilder Settings
         {
-            get => new SettingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Manage.V1.Config.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="ConfigRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Manage.V1.Config.ConfigRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -50,7 +52,7 @@ namespace GitHub.Manage.V1.Config {
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="ConfigRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Manage.V1.Config.ConfigRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
