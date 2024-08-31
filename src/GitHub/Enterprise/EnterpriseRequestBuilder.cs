@@ -2,35 +2,37 @@
 using GitHub.Enterprise.Announcement;
 using GitHub.Enterprise.Settings;
 using GitHub.Enterprise.Stats;
+using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System;
-namespace GitHub.Enterprise {
+namespace GitHub.Enterprise
+{
     /// <summary>
     /// Builds and executes requests for operations under \enterprise
     /// </summary>
-    public class EnterpriseRequestBuilder : BaseRequestBuilder 
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.17.0")]
+    public partial class EnterpriseRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The announcement property</summary>
-        public AnnouncementRequestBuilder Announcement
+        public global::GitHub.Enterprise.Announcement.AnnouncementRequestBuilder Announcement
         {
-            get => new AnnouncementRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprise.Announcement.AnnouncementRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The settings property</summary>
-        public SettingsRequestBuilder Settings
+        public global::GitHub.Enterprise.Settings.SettingsRequestBuilder Settings
         {
-            get => new SettingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprise.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The stats property</summary>
-        public StatsRequestBuilder Stats
+        public global::GitHub.Enterprise.Stats.StatsRequestBuilder Stats
         {
-            get => new StatsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::GitHub.Enterprise.Stats.StatsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="EnterpriseRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Enterprise.EnterpriseRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -38,7 +40,7 @@ namespace GitHub.Enterprise {
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="EnterpriseRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Enterprise.EnterpriseRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
