@@ -78,9 +78,11 @@ namespace GitHub.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "primary", n => { Primary = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
+                { "fragment", n => { Fragment = n.GetStringValue(); } },
+                { "matches", n => { Matches = n.GetCollectionOfObjectValues<global::GitHub.Models.Users_matches>(global::GitHub.Models.Users_matches.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "object_type", n => { ObjectType = n.GetStringValue(); } },
+                { "object_url", n => { ObjectUrl = n.GetStringValue(); } },
+                { "property", n => { Property = n.GetStringValue(); } },
             };
         }
         /// <summary>
