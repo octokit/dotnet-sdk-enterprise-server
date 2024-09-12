@@ -12,6 +12,14 @@ namespace GitHub.AppManifests.Item.Conversions
     public partial class Integration : global::GitHub.Models.Integration, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The client_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ClientId { get; set; }
+#nullable restore
+#else
+        public string ClientId { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,6 +38,7 @@ namespace GitHub.AppManifests.Item.Conversions
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
+                { "client_id", n => { ClientId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -40,6 +49,7 @@ namespace GitHub.AppManifests.Item.Conversions
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
+            writer.WriteStringValue("client_id", ClientId);
         }
     }
 }
