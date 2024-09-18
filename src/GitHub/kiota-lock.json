@@ -1,14 +1,15 @@
 {
-  "descriptionHash": "6CA137E1F68B10CB479F25A8C8834292DE7E77CD31EED411A6F07ADC2F822AE77386DA8282A349AA08AA0C97D296A957F77EF5F0BD685754B62676BE2E75A07A",
+  "descriptionHash": "FF5C61FA7A7BEC22EAF8A5AD82EE3AA5275C2E0A0A334C87C120646F91B6C18F376073FF6636BDB1AB7583FBAAD594CDD528C7A87DD075722825AAE0546FBFDA",
   "descriptionLocation": "../../../../../schemas/ghes-3.12.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.14.0",
+  "kiotaVersion": "1.18.0",
   "clientClassName": "GitHubClient",
   "clientNamespaceName": "GitHub",
   "language": "CSharp",
   "usesBackingStore": false,
   "excludeBackwardCompatible": true,
   "includeAdditionalData": true,
+  "disableSSLValidation": false,
   "serializers": [
     "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
     "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
