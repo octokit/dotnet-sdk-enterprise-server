@@ -42,8 +42,6 @@ namespace GitHub.Models
 #else
         public string MessageEscaped { get; set; }
 #endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Models.ValidationError"/> and sets the default values.
         /// </summary>

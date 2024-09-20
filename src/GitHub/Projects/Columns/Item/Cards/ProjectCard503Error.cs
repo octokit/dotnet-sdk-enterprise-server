@@ -49,8 +49,6 @@ namespace GitHub.Projects.Columns.Item.Cards
 #else
         public string MessageEscaped { get; set; }
 #endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Projects.Columns.Item.Cards.ProjectCard503Error"/> and sets the default values.
         /// </summary>

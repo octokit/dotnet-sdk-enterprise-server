@@ -33,8 +33,6 @@ namespace GitHub.Admin.PreReceiveEnvironments.Item.Downloads
 #else
         public string MessageEscaped { get; set; }
 #endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Admin.PreReceiveEnvironments.Item.Downloads.PreReceiveEnvironmentDownloadStatus422Error"/> and sets the default values.
         /// </summary>

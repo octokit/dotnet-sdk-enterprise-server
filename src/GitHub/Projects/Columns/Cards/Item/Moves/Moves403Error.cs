@@ -41,8 +41,6 @@ namespace GitHub.Projects.Columns.Cards.Item.Moves
 #else
         public string MessageEscaped { get; set; }
 #endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Projects.Columns.Cards.Item.Moves.Moves403Error"/> and sets the default values.
         /// </summary>
