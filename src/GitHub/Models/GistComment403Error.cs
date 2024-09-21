@@ -80,6 +80,7 @@ namespace GitHub.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::GitHub.Models.GistComment403Error_block>("block", Block);
             writer.WriteStringValue("documentation_url", DocumentationUrl);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

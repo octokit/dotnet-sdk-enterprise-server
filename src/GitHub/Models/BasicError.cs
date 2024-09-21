@@ -89,6 +89,7 @@ namespace GitHub.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("documentation_url", DocumentationUrl);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
