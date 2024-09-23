@@ -70,6 +70,7 @@ namespace GitHub.Repos.Item.Item
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("documentation_url", DocumentationUrl);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

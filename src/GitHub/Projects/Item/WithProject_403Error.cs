@@ -80,6 +80,7 @@ namespace GitHub.Projects.Item
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("documentation_url", DocumentationUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("errors", Errors);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

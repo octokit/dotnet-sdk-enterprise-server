@@ -102,6 +102,7 @@ namespace GitHub.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("detail", Detail);
             writer.WriteStringValue("documentation_url", DocumentationUrl);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteCollectionOfPrimitiveValues<string>("schemas", Schemas);
             writer.WriteStringValue("scimType", ScimType);
             writer.WriteIntValue("status", Status);
