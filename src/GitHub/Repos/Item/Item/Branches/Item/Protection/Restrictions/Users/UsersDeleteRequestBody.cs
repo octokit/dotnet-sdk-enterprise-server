@@ -5,47 +5,39 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace GitHub.Models
+namespace GitHub.Repos.Item.Item.Branches.Item.Protection.Restrictions.Users
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
-    public partial class Users_matches : IAdditionalDataHolder, IParsable
+    public partial class UsersDeleteRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The indices property</summary>
+        /// <summary>The username for users</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Indices { get; set; }
+        public List<string>? Users { get; set; }
 #nullable restore
 #else
-        public List<int?> Indices { get; set; }
-#endif
-        /// <summary>The text property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Text { get; set; }
-#nullable restore
-#else
-        public string Text { get; set; }
+        public List<string> Users { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::GitHub.Models.Users_matches"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Repos.Item.Item.Branches.Item.Protection.Restrictions.Users.UsersDeleteRequestBody"/> and sets the default values.
         /// </summary>
-        public Users_matches()
+        public UsersDeleteRequestBody()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::GitHub.Models.Users_matches"/></returns>
+        /// <returns>A <see cref="global::GitHub.Repos.Item.Item.Branches.Item.Protection.Restrictions.Users.UsersDeleteRequestBody"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::GitHub.Models.Users_matches CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::GitHub.Repos.Item.Item.Branches.Item.Protection.Restrictions.Users.UsersDeleteRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::GitHub.Models.Users_matches();
+            return new global::GitHub.Repos.Item.Item.Branches.Item.Protection.Restrictions.Users.UsersDeleteRequestBody();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +47,7 @@ namespace GitHub.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "indices", n => { Indices = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "text", n => { Text = n.GetStringValue(); } },
+                { "users", n => { Users = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,8 +57,7 @@ namespace GitHub.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<int?>("indices", Indices);
-            writer.WriteStringValue("text", Text);
+            writer.WriteCollectionOfPrimitiveValues<string>("users", Users);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
