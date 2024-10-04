@@ -4,7 +4,7 @@ using System;
 namespace GitHub.Repos.Item.Item.PreReceiveHooks.Item
 {
     /// <summary>The state of enforcement for the hook on this repository.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public enum WithPre_receive_hook_PatchRequestBody_enforcement
     {
         [EnumMember(Value = "enabled")]

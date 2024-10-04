@@ -15,7 +15,7 @@ namespace GitHub.Manage.V1.Config.License
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\config\license
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class LicenseRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The check property</summary>

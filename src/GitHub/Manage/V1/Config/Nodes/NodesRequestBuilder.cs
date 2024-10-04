@@ -14,7 +14,7 @@ namespace GitHub.Manage.V1.Config.Nodes
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\config\nodes
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class NodesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -83,7 +83,7 @@ namespace GitHub.Manage.V1.Config.Nodes
         /// <summary>
         /// Get node metadata for all configured nodes in the current cluster. For more information, see &quot;[About clustering](https://docs.github.com/enterprise-server@3.12/admin/enterprise-management/configuring-clustering/about-clustering).&quot;
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class NodesRequestBuilderGetQueryParameters 
         {
             /// <summary>The cluster roles from the cluster configuration file.</summary>

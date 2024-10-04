@@ -14,7 +14,7 @@ namespace GitHub.Authorizations.Clients.Item.Item
     /// <summary>
     /// Builds and executes requests for operations under \authorizations\clients\{client_id}\{fingerprint}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class WithFingerprintItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

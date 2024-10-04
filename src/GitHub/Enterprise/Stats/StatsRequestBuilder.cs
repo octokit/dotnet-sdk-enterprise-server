@@ -23,7 +23,7 @@ namespace GitHub.Enterprise.Stats
     /// <summary>
     /// Builds and executes requests for operations under \enterprise\stats
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class StatsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The all property</summary>
