@@ -13,7 +13,7 @@ namespace GitHub.Users.Item.Site_admin
     /// <summary>
     /// Builds and executes requests for operations under \users\{username}\site_admin
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class Site_adminRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

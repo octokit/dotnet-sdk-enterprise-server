@@ -14,7 +14,7 @@ namespace GitHub.Manage.V1.Replication.Status
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\replication\status
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class StatusRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -83,7 +83,7 @@ namespace GitHub.Manage.V1.Replication.Status
         /// <summary>
         /// Gets the status of all services running on each replica node.This endpoint may take several seconds to reply.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class StatusRequestBuilderGetQueryParameters 
         {
             /// <summary>The cluster roles from the cluster configuration file.</summary>

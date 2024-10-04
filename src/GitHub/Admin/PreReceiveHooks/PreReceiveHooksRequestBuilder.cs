@@ -15,7 +15,7 @@ namespace GitHub.Admin.PreReceiveHooks
     /// <summary>
     /// Builds and executes requests for operations under \admin\pre-receive-hooks
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class PreReceiveHooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.admin.preReceiveHooks.item collection</summary>
@@ -134,7 +134,7 @@ namespace GitHub.Admin.PreReceiveHooks
         /// <summary>
         /// List pre-receive hooks
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class PreReceiveHooksRequestBuilderGetQueryParameters 
         {
             /// <summary>The direction to sort the results by.</summary>
