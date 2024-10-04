@@ -10,7 +10,7 @@ namespace GitHub.Admin.PreReceiveHooks
     /// <summary>
     /// The pre-receive environment where the script is executed.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class PreReceiveHooksPostRequestBody_environment : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

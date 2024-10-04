@@ -16,7 +16,7 @@ namespace GitHub.Manage.V1.Config
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\config
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class ConfigRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The apply property</summary>

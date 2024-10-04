@@ -13,7 +13,7 @@ namespace GitHub.Admin.Keys.Item
     /// <summary>
     /// Builds and executes requests for operations under \admin\keys\{key_ids}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class WithKey_idsItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

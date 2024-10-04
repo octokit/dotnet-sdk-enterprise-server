@@ -14,7 +14,7 @@ namespace GitHub.Manage.V1.Maintenance
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\maintenance
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class MaintenanceRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -128,7 +128,7 @@ namespace GitHub.Manage.V1.Maintenance
         /// <summary>
         /// Gets the status and details of maintenance mode on all available nodes. For more information, see &quot;[Enabling and scheduling maintenance mode](https://docs.github.com/enterprise-server@3.14/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode).&quot;
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class MaintenanceRequestBuilderGetQueryParameters 
         {
             /// <summary>The cluster roles from the cluster configuration file.</summary>

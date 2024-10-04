@@ -13,7 +13,7 @@ namespace GitHub.Manage.V1.Config.Apply.Events
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\config\apply\events
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class EventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -82,7 +82,7 @@ namespace GitHub.Manage.V1.Config.Apply.Events
         /// <summary>
         /// Lists events from an in-process `ghe-config-apply` run on your Github Enterprise Server instance.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class EventsRequestBuilderGetQueryParameters 
         {
             /// <summary>The unique ID of the last response from a host, used for pagination.</summary>

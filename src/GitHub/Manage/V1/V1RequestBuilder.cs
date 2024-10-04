@@ -18,7 +18,7 @@ namespace GitHub.Manage.V1
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class V1RequestBuilder : BaseRequestBuilder
     {
         /// <summary>The access property</summary>

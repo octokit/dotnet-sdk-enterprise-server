@@ -15,7 +15,7 @@ namespace GitHub.Admin.PreReceiveEnvironments.Item
     /// <summary>
     /// Builds and executes requests for operations under \admin\pre-receive-environments\{pre_receive_environment_id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class WithPre_receive_environment_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The downloads property</summary>

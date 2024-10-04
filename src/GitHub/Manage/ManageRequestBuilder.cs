@@ -12,7 +12,7 @@ namespace GitHub.Manage
     /// <summary>
     /// Builds and executes requests for operations under \manage
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class ManageRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The v1 property</summary>
