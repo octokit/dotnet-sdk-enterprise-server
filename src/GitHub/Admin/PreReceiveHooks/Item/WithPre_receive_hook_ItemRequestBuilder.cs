@@ -14,7 +14,7 @@ namespace GitHub.Admin.PreReceiveHooks.Item
     /// <summary>
     /// Builds and executes requests for operations under \admin\pre-receive-hooks\{pre_receive_hook_id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class WithPre_receive_hook_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

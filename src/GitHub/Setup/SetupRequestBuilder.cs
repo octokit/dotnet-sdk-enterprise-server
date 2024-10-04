@@ -12,7 +12,7 @@ namespace GitHub.Setup
     /// <summary>
     /// Builds and executes requests for operations under \setup
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class SetupRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The api property</summary>

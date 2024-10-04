@@ -14,7 +14,7 @@ namespace GitHub.Setup.Api.Maintenance
     /// <summary>
     /// Builds and executes requests for operations under \setup\api\maintenance
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class MaintenanceRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

@@ -15,7 +15,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users
     /// <summary>
     /// Builds and executes requests for operations under \scim\v2\enterprises\{enterprise}\Users
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.scim.v2.enterprises.item.Users.item collection</summary>
@@ -157,7 +157,7 @@ namespace GitHub.Scim.V2.Enterprises.Item.Users
         /// <summary>
         /// &gt; [!NOTE]&gt; The SCIM API endpoints for enterprise accounts are currently in *private* beta and are subject to change.Lists provisioned SCIM enterprise members.When a user with a SCIM-provisioned external identity is removed from an enterprise through a `patch` with `active` flag set to `false`, the account&apos;s metadata is preserved to allow the user to re-join the enterprise in the future. However, the user&apos;s account will be suspended and the user will not be able to sign-in. In order to permanently suspend the users account with no ability to re-join the enterprise in the future, use the `delete` request. Users that were not permanently deleted will be visible in the returned results.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class UsersRequestBuilderGetQueryParameters 
         {
             /// <summary>Used for pagination: the number of results to return per page.</summary>

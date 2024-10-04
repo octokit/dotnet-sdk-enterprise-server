@@ -12,7 +12,7 @@ namespace GitHub.Admin.Ldap.Users
     /// <summary>
     /// Builds and executes requests for operations under \admin\ldap\users
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.admin.ldap.users.item collection</summary>

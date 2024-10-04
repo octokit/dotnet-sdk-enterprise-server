@@ -15,7 +15,7 @@ namespace GitHub.Admin.Keys
     /// <summary>
     /// Builds and executes requests for operations under \admin\keys
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class KeysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.admin.keys.item collection</summary>
@@ -94,7 +94,7 @@ namespace GitHub.Admin.Keys
         /// <summary>
         /// List public keys
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class KeysRequestBuilderGetQueryParameters 
         {
             /// <summary>The direction to sort the results by.</summary>
