@@ -14,7 +14,7 @@ namespace GitHub.Orgs.Item.AuditLog
     /// <summary>
     /// Builds and executes requests for operations under \orgs\{org}\audit-log
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class AuditLogRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -84,7 +84,7 @@ namespace GitHub.Orgs.Item.AuditLog
         /// <summary>
         /// Gets the audit log for an organization. For more information, see &quot;[Reviewing the audit log for your organization](https://docs.github.com/enterprise-server@3.11/github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization).&quot;By default, the response includes up to 30 events from the past three months. Use the `phrase` parameter to filter results and retrieve older events. For example, use the `phrase` parameter with the `created` qualifier to filter events based on when the events occurred. For more information, see &quot;[Reviewing the audit log for your organization](https://docs.github.com/enterprise-server@3.11/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization#searching-the-audit-log).&quot;Use pagination to retrieve fewer or more than 30 events. For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api).&quot;The authenticated user must be an organization owner to use this endpoint.OAuth app tokens and personal access tokens (classic) need the `read:audit_log` scope to use this endpoint.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class AuditLogRequestBuilderGetQueryParameters 
         {
             /// <summary>A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.11/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.</summary>

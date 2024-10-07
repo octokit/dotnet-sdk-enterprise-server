@@ -13,7 +13,7 @@ namespace GitHub.Admin.Ldap
     /// <summary>
     /// Builds and executes requests for operations under \admin\ldap
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class LdapRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The teams property</summary>

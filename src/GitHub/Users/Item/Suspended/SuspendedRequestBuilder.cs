@@ -13,7 +13,7 @@ namespace GitHub.Users.Item.Suspended
     /// <summary>
     /// Builds and executes requests for operations under \users\{username}\suspended
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class SuspendedRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

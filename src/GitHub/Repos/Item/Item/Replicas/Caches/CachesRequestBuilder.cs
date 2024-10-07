@@ -14,7 +14,7 @@ namespace GitHub.Repos.Item.Item.Replicas.Caches
     /// <summary>
     /// Builds and executes requests for operations under \repos\{owner-id}\{repo-id}\replicas\caches
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class CachesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -91,7 +91,7 @@ namespace GitHub.Repos.Item.Item.Replicas.Caches
         /// <summary>
         /// Lists the status of each repository cache replica.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class CachesRequestBuilderGetQueryParameters 
         {
             /// <summary>The page number of the results to fetch. For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.11/rest/using-the-rest-api/using-pagination-in-the-rest-api).&quot;</summary>
