@@ -12,7 +12,7 @@ namespace GitHub.Manage.V1.Cluster
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\cluster
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class ClusterRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The status property</summary>

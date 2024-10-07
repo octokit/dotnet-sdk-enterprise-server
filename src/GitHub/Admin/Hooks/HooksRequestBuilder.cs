@@ -15,7 +15,7 @@ namespace GitHub.Admin.Hooks
     /// <summary>
     /// Builds and executes requests for operations under \admin\hooks
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class HooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.admin.hooks.item collection</summary>
@@ -134,7 +134,7 @@ namespace GitHub.Admin.Hooks
         /// <summary>
         /// List global webhooks
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class HooksRequestBuilderGetQueryParameters 
         {
             /// <summary>The page number of the results to fetch. For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.14/rest/using-the-rest-api/using-pagination-in-the-rest-api).&quot;</summary>

@@ -14,7 +14,7 @@ namespace GitHub.Applications.Grants.Item
     /// <summary>
     /// Builds and executes requests for operations under \applications\grants\{grant_id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class WithGrant_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

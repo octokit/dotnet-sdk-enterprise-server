@@ -15,7 +15,7 @@ namespace GitHub.Authorizations.Clients.Item
     /// <summary>
     /// Builds and executes requests for operations under \authorizations\clients\{client_id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class WithClient_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.authorizations.clients.item.item collection</summary>

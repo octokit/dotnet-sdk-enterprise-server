@@ -10,7 +10,7 @@ namespace GitHub.Models
     /// <summary>
     /// A GitHub Security Advisory.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class GlobalAdvisory : IParsable
     {
         /// <summary>In GitHub Enterprise Server, this field will always be empty because the user metadata of credited users will not be available.</summary>
