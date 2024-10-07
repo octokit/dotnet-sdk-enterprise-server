@@ -12,7 +12,7 @@ namespace GitHub.Manage.V1.Checks
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\checks
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class ChecksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The systemRequirements property</summary>

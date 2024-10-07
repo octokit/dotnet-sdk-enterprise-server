@@ -15,7 +15,7 @@ namespace GitHub.Repos.Item.Item.PreReceiveHooks
     /// <summary>
     /// Builds and executes requests for operations under \repos\{owner-id}\{repo-id}\pre-receive-hooks
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class PreReceiveHooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.repos.item.item.preReceiveHooks.item collection</summary>
@@ -97,7 +97,7 @@ namespace GitHub.Repos.Item.Item.PreReceiveHooks
         /// <summary>
         /// List all pre-receive hooks that are enabled or testing for this repository as well as any disabled hooks that are allowed to be enabled at the repository level. Pre-receive hooks that are disabled at a higher level and are not configurable will not be listed.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class PreReceiveHooksRequestBuilderGetQueryParameters 
         {
             /// <summary>The direction to sort the results by.</summary>

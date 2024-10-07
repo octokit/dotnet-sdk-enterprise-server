@@ -14,7 +14,7 @@ namespace GitHub.Enterprises.Item.Code_security_and_analysis
     /// <summary>
     /// Builds and executes requests for operations under \enterprises\{enterprise}\code_security_and_analysis
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class Code_security_and_analysisRequestBuilder : BaseRequestBuilder
     {
         /// <summary>

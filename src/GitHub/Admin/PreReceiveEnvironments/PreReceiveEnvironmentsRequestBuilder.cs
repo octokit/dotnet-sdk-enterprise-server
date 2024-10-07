@@ -15,7 +15,7 @@ namespace GitHub.Admin.PreReceiveEnvironments
     /// <summary>
     /// Builds and executes requests for operations under \admin\pre-receive-environments
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class PreReceiveEnvironmentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the GitHub.admin.preReceiveEnvironments.item collection</summary>
@@ -134,7 +134,7 @@ namespace GitHub.Admin.PreReceiveEnvironments
         /// <summary>
         /// List pre-receive environments
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class PreReceiveEnvironmentsRequestBuilderGetQueryParameters 
         {
             /// <summary>The direction to sort the results by.</summary>

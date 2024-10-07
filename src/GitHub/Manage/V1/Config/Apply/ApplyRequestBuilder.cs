@@ -14,7 +14,7 @@ namespace GitHub.Manage.V1.Config.Apply
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\config\apply
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class ApplyRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The events property</summary>
@@ -131,7 +131,7 @@ namespace GitHub.Manage.V1.Config.Apply
         /// <summary>
         /// Displays the current status of `ghe-config-apply` in the environment or the status of a historical run by ID.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class ApplyRequestBuilderGetQueryParameters 
         {
             /// <summary>The unique run ID of the `ghe-config-apply` run.</summary>

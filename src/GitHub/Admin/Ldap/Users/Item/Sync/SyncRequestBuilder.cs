@@ -13,7 +13,7 @@ namespace GitHub.Admin.Ldap.Users.Item.Sync
     /// <summary>
     /// Builds and executes requests for operations under \admin\ldap\users\{username}\sync
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class SyncRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
