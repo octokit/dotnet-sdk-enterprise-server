@@ -14,7 +14,7 @@ namespace GitHub.Manage.V1.VersionNamespace
     /// <summary>
     /// Builds and executes requests for operations under \manage\v1\version
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public partial class VersionRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -84,7 +84,7 @@ namespace GitHub.Manage.V1.VersionNamespace
         /// <summary>
         /// Gets the GitHub Enterprise Server release versions that are currently installed on all available nodes. For more information, see &quot;[GitHub Enterprise Server releases](https://docs.github.com/enterprise-server@3.12/admin/all-releases).&quot;
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class VersionRequestBuilderGetQueryParameters 
         {
             /// <summary>The cluster roles from the cluster configuration file.</summary>
