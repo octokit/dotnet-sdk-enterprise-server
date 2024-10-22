@@ -76,7 +76,7 @@ namespace GitHub.Orgs.Item
 #else
         public string Location { get; set; }
 #endif
-        /// <summary>Specifies which types of repositories non-admin organization members can create. **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.</summary>
+        /// <summary>Specifies which types of repositories non-admin organization members can create. **Note:** This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.</summary>
         public global::GitHub.Orgs.Item.WithOrgPatchRequestBody_members_allowed_repository_creation_type? MembersAllowedRepositoryCreationType { get; set; }
         /// <summary>Whether organization members can create internal repositories, which are visible to all enterprise members. You can only allow members to create internal repositories if your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see &quot;[Restricting repository creation in your organization](https://docs.github.com/enterprise-server@3.13/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)&quot; in the GitHub Help documentation.</summary>
         public bool? MembersCanCreateInternalRepositories { get; set; }
