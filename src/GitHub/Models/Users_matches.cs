@@ -5,47 +5,47 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace GitHub.Repos.Item.Item.Dispatches
+namespace GitHub.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     #pragma warning disable CS1591
-    public partial class DispatchesPostRequestBody : IAdditionalDataHolder, IParsable
+    public partial class Users_matches : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.</summary>
+        /// <summary>The indices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody_client_payload? ClientPayload { get; set; }
+        public List<int?>? Indices { get; set; }
 #nullable restore
 #else
-        public global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody_client_payload ClientPayload { get; set; }
+        public List<int?> Indices { get; set; }
 #endif
-        /// <summary>A custom webhook event name. Must be 100 characters or fewer.</summary>
+        /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventType { get; set; }
+        public string? Text { get; set; }
 #nullable restore
 #else
-        public string EventType { get; set; }
+        public string Text { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Models.Users_matches"/> and sets the default values.
         /// </summary>
-        public DispatchesPostRequestBody()
+        public Users_matches()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody"/></returns>
+        /// <returns>A <see cref="global::GitHub.Models.Users_matches"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::GitHub.Models.Users_matches CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody();
+            return new global::GitHub.Models.Users_matches();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +55,8 @@ namespace GitHub.Repos.Item.Item.Dispatches
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "client_payload", n => { ClientPayload = n.GetObjectValue<global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody_client_payload>(global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody_client_payload.CreateFromDiscriminatorValue); } },
-                { "event_type", n => { EventType = n.GetStringValue(); } },
+                { "indices", n => { Indices = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "text", n => { Text = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace GitHub.Repos.Item.Item.Dispatches
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::GitHub.Repos.Item.Item.Dispatches.DispatchesPostRequestBody_client_payload>("client_payload", ClientPayload);
-            writer.WriteStringValue("event_type", EventType);
+            writer.WriteCollectionOfPrimitiveValues<int?>("indices", Indices);
+            writer.WriteStringValue("text", Text);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
