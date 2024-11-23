@@ -59,7 +59,7 @@ namespace GitHub.Manage.V1.Config.License
             return await RequestAdapter.SendAsync<global::GitHub.Models.GhesLicenseInfo>(requestInfo, global::GitHub.Models.GhesLicenseInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Uploads an enterprise license. This operation does not automatically activate the license.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// Uploads a new enterprise license. In order to apply it right away, use the `apply` query parameter.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.14/rest/enterprise-admin/manage-ghes#upload-an-enterprise-license" />
         /// </summary>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace GitHub.Manage.V1.Config.License
             return requestInfo;
         }
         /// <summary>
-        /// Uploads an enterprise license. This operation does not automatically activate the license.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// Uploads a new enterprise license. In order to apply it right away, use the `apply` query parameter.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -128,12 +128,12 @@ namespace GitHub.Manage.V1.Config.License
             return new global::GitHub.Manage.V1.Config.License.LicenseRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Uploads an enterprise license. This operation does not automatically activate the license.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
+        /// Uploads a new enterprise license. In order to apply it right away, use the `apply` query parameter.&gt; [!NOTE]&gt; The request body for this operation must be submitted as `multipart/form-data` data. You can can reference the license file by prefixing the filename with the `@` symbol using `curl`. For more information, see the [`curl` documentation](https://curl.se/docs/manpage.html#-F).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class LicenseRequestBuilderPutQueryParameters 
         {
-            /// <summary>Whether to apply changes from the license. Uploading a license does not automatically apply changes. To make the changes effective, you can specify to apply the license too.</summary>
+            /// <summary>Whether to instantly apply changes from the license. Otherwise the new license can be applied using the [`/manage/v1/config/apply`](https://docs.github.com/enterprise-server@3.14/rest/enterprise-admin/manage-ghes#start-configuration-apply-process) endpoint.</summary>
             [QueryParameter("apply")]
             public bool? Apply { get; set; }
         }
