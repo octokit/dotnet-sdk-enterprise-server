@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace GitHub.Models
 {
-    /// <summary>The target of the ruleset</summary>
+    /// <summary>The target of the ruleset.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     public enum RepositoryRuleset_target
     {
