@@ -31,7 +31,7 @@ namespace GitHub.Orgs.Item.Rulesets.Item
 #else
         public global::GitHub.Models.OrgRulesetConditions Conditions { get; set; }
 #endif
-        /// <summary>The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.</summary>
+        /// <summary>The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.</summary>
         public global::GitHub.Models.RepositoryRuleEnforcement? Enforcement { get; set; }
         /// <summary>The name of the ruleset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,7 +49,7 @@ namespace GitHub.Orgs.Item.Rulesets.Item
 #else
         public List<global::GitHub.Models.RepositoryRule> Rules { get; set; }
 #endif
-        /// <summary>The target of the ruleset</summary>
+        /// <summary>The target of the ruleset.</summary>
         public global::GitHub.Orgs.Item.Rulesets.Item.WithRuleset_PutRequestBody_target? Target { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Orgs.Item.Rulesets.Item.WithRuleset_PutRequestBody"/> and sets the default values.
