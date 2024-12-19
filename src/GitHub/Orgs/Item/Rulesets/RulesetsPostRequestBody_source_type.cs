@@ -3,21 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace GitHub.Orgs.Item.Rulesets
 {
-    /// <summary>The target of the ruleset.</summary>
+    /// <summary>The type of the source of the ruleset</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
-    public enum RulesetsPostRequestBody_target
+    public enum RulesetsPostRequestBody_source_type
     {
-        [EnumMember(Value = "branch")]
+        [EnumMember(Value = "Repository")]
         #pragma warning disable CS1591
-        Branch,
+        Repository,
         #pragma warning restore CS1591
-        [EnumMember(Value = "tag")]
+        [EnumMember(Value = "Organization")]
         #pragma warning disable CS1591
-        Tag,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "push")]
-        #pragma warning disable CS1591
-        Push,
+        Organization,
         #pragma warning restore CS1591
     }
 }

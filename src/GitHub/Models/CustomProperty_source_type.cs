@@ -3,21 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace GitHub.Models
 {
-    /// <summary>The target of the ruleset.</summary>
+    /// <summary>The source type of the property</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
-    public enum RepositoryRuleset_target
+    public enum CustomProperty_source_type
     {
-        [EnumMember(Value = "branch")]
+        [EnumMember(Value = "organization")]
         #pragma warning disable CS1591
-        Branch,
+        Organization,
         #pragma warning restore CS1591
-        [EnumMember(Value = "tag")]
+        [EnumMember(Value = "enterprise")]
         #pragma warning disable CS1591
-        Tag,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "push")]
-        #pragma warning disable CS1591
-        Push,
+        Enterprise,
         #pragma warning restore CS1591
     }
 }

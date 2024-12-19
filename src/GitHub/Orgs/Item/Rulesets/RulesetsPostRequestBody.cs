@@ -31,7 +31,7 @@ namespace GitHub.Orgs.Item.Rulesets
 #else
         public global::GitHub.Models.OrgRulesetConditions Conditions { get; set; }
 #endif
-        /// <summary>The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page.</summary>
+        /// <summary>The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.</summary>
         public global::GitHub.Models.RepositoryRuleEnforcement? Enforcement { get; set; }
         /// <summary>The name of the ruleset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,7 +49,9 @@ namespace GitHub.Orgs.Item.Rulesets
 #else
         public List<global::GitHub.Models.RepositoryRule> Rules { get; set; }
 #endif
-        /// <summary>The target of the ruleset</summary>
+        /// <summary>The type of the source of the ruleset</summary>
+        public global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody_source_type? SourceType { get; set; }
+        /// <summary>The target of the ruleset.</summary>
         public global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody_target? Target { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody"/> and sets the default values.
@@ -82,6 +84,7 @@ namespace GitHub.Orgs.Item.Rulesets
                 { "enforcement", n => { Enforcement = n.GetEnumValue<global::GitHub.Models.RepositoryRuleEnforcement>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::GitHub.Models.RepositoryRule>(global::GitHub.Models.RepositoryRule.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "source_type", n => { SourceType = n.GetEnumValue<global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody_source_type>(); } },
                 { "target", n => { Target = n.GetEnumValue<global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody_target>(); } },
             };
         }
@@ -97,6 +100,7 @@ namespace GitHub.Orgs.Item.Rulesets
             writer.WriteEnumValue<global::GitHub.Models.RepositoryRuleEnforcement>("enforcement", Enforcement);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::GitHub.Models.RepositoryRule>("rules", Rules);
+            writer.WriteEnumValue<global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody_source_type>("source_type", SourceType);
             writer.WriteEnumValue<global::GitHub.Orgs.Item.Rulesets.RulesetsPostRequestBody_target>("target", Target);
             writer.WriteAdditionalData(AdditionalData);
         }
