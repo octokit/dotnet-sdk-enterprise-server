@@ -9,45 +9,51 @@ namespace GitHub.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
     #pragma warning disable CS1591
-    public partial class Users : IAdditionalDataHolder, IParsable
+    public partial class DependencyGraphSpdxSbom_sbom_relationships : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether this email address is the primary address.</summary>
-        public bool? Primary { get; set; }
-        /// <summary>The type of email address.</summary>
+        /// <summary>The SPDX identifier of the package that is the target of the relationship.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? RelatedSpdxElement { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string RelatedSpdxElement { get; set; }
 #endif
-        /// <summary>The email address.</summary>
+        /// <summary>The type of relationship between the two SPDX elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? RelationshipType { get; set; }
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string RelationshipType { get; set; }
+#endif
+        /// <summary>The SPDX identifier of the package that is the source of the relationship.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SpdxElementId { get; set; }
+#nullable restore
+#else
+        public string SpdxElementId { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::GitHub.Models.Users"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Models.DependencyGraphSpdxSbom_sbom_relationships"/> and sets the default values.
         /// </summary>
-        public Users()
+        public DependencyGraphSpdxSbom_sbom_relationships()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::GitHub.Models.Users"/></returns>
+        /// <returns>A <see cref="global::GitHub.Models.DependencyGraphSpdxSbom_sbom_relationships"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::GitHub.Models.Users CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::GitHub.Models.DependencyGraphSpdxSbom_sbom_relationships CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::GitHub.Models.Users();
+            return new global::GitHub.Models.DependencyGraphSpdxSbom_sbom_relationships();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,9 +63,9 @@ namespace GitHub.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "primary", n => { Primary = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
+                { "relatedSpdxElement", n => { RelatedSpdxElement = n.GetStringValue(); } },
+                { "relationshipType", n => { RelationshipType = n.GetStringValue(); } },
+                { "spdxElementId", n => { SpdxElementId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,9 +75,9 @@ namespace GitHub.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("primary", Primary);
-            writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("value", Value);
+            writer.WriteStringValue("relatedSpdxElement", RelatedSpdxElement);
+            writer.WriteStringValue("relationshipType", RelationshipType);
+            writer.WriteStringValue("spdxElementId", SpdxElementId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
