@@ -35,7 +35,7 @@ namespace GitHub.Repos.Item.Item.Dependabot.Alerts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AlertsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/repos/{owner%2Did}/{repo%2Did}/dependabot/alerts{?after*,before*,direction*,ecosystem*,first*,last*,manifest*,package*,page*,per_page*,scope*,severity*,sort*,state*}", pathParameters)
+        public AlertsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/repos/{owner%2Did}/{repo%2Did}/dependabot/alerts{?direction*,ecosystem*,manifest*,package*,scope*,severity*,sort*,state*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace GitHub.Repos.Item.Item.Dependabot.Alerts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AlertsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/repos/{owner%2Did}/{repo%2Did}/dependabot/alerts{?after*,before*,direction*,ecosystem*,first*,last*,manifest*,package*,page*,per_page*,scope*,severity*,sort*,state*}", rawUrl)
+        public AlertsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/repos/{owner%2Did}/{repo%2Did}/dependabot/alerts{?direction*,ecosystem*,manifest*,package*,scope*,severity*,sort*,state*}", rawUrl)
         {
         }
         /// <summary>
@@ -111,26 +111,6 @@ namespace GitHub.Repos.Item.Item.Dependabot.Alerts
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class AlertsRequestBuilderGetQueryParameters 
         {
-            /// <summary>A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.12/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/using-pagination-in-the-rest-api).&quot;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("after")]
-            public string? After { get; set; }
-#nullable restore
-#else
-            [QueryParameter("after")]
-            public string After { get; set; }
-#endif
-            /// <summary>A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.12/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/using-pagination-in-the-rest-api).&quot;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("before")]
-            public string? Before { get; set; }
-#nullable restore
-#else
-            [QueryParameter("before")]
-            public string Before { get; set; }
-#endif
             /// <summary>The direction to sort the results by.</summary>
             [QueryParameter("direction")]
             public global::GitHub.Repos.Item.Item.Dependabot.Alerts.GetDirectionQueryParameterType? Direction { get; set; }
@@ -144,12 +124,6 @@ namespace GitHub.Repos.Item.Item.Dependabot.Alerts
             [QueryParameter("ecosystem")]
             public string Ecosystem { get; set; }
 #endif
-            /// <summary>**Deprecated**. The number of results per page (max 100), starting from the first matching result.This parameter must not be used in combination with `last`.Instead, use `per_page` in combination with `after` to fetch the first page of results.</summary>
-            [QueryParameter("first")]
-            public int? First { get; set; }
-            /// <summary>**Deprecated**. The number of results per page (max 100), starting from the last matching result.This parameter must not be used in combination with `first`.Instead, use `per_page` in combination with `before` to fetch the last page of results.</summary>
-            [QueryParameter("last")]
-            public int? Last { get; set; }
             /// <summary>A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -170,14 +144,6 @@ namespace GitHub.Repos.Item.Item.Dependabot.Alerts
             [QueryParameter("package")]
             public string Package { get; set; }
 #endif
-            /// <summary>**Closing down notice**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.</summary>
-            [Obsolete("")]
-            [QueryParameter("page")]
-            public int? Page { get; set; }
-            /// <summary>The number of results per page (max 100). For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.12/rest/using-the-rest-api/using-pagination-in-the-rest-api).&quot;</summary>
-            [Obsolete("")]
-            [QueryParameter("per_page")]
-            public int? PerPage { get; set; }
             /// <summary>The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.</summary>
             [QueryParameter("scope")]
             public global::GitHub.Repos.Item.Item.Dependabot.Alerts.GetScopeQueryParameterType? Scope { get; set; }
