@@ -34,8 +34,8 @@ namespace GitHub.Repos.Item.Item.AutomatedSecurityFixes
         {
         }
         /// <summary>
-        /// Shows whether automated security fixes are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see &quot;[Configuring automated security fixes](https://docs.github.com/enterprise-server@3.11/articles/configuring-automated-security-fixes)&quot;.
-        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/repos/repos#check-if-automated-security-fixes-are-enabled-for-a-repository" />
+        /// Shows whether Dependabot security updates are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see &quot;[Configuring Dependabot security updates](https://docs.github.com/enterprise-server@3.11/articles/configuring-automated-security-fixes)&quot;.
+        /// API method documentation <see href="https://docs.github.com/enterprise-server@3.11/rest/repos/repos#check-if-dependabot-security-updates-are-enabled-for-a-repository" />
         /// </summary>
         /// <returns>A <see cref="global::GitHub.Models.CheckAutomatedSecurityFixes"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace GitHub.Repos.Item.Item.AutomatedSecurityFixes
             return await RequestAdapter.SendAsync<global::GitHub.Models.CheckAutomatedSecurityFixes>(requestInfo, global::GitHub.Models.CheckAutomatedSecurityFixes.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Shows whether automated security fixes are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see &quot;[Configuring automated security fixes](https://docs.github.com/enterprise-server@3.11/articles/configuring-automated-security-fixes)&quot;.
+        /// Shows whether Dependabot security updates are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see &quot;[Configuring Dependabot security updates](https://docs.github.com/enterprise-server@3.11/articles/configuring-automated-security-fixes)&quot;.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
