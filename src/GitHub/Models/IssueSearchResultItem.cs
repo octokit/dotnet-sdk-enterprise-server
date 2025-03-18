@@ -225,6 +225,14 @@ namespace GitHub.Models
 #else
         public string Title { get; set; }
 #endif
+        /// <summary>The type of issue.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::GitHub.Models.IssueType? Type { get; set; }
+#nullable restore
+#else
+        public global::GitHub.Models.IssueType Type { get; set; }
+#endif
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The url property</summary>
@@ -301,6 +309,7 @@ namespace GitHub.Models
                 { "text_matches", n => { TextMatches = n.GetCollectionOfObjectValues<global::GitHub.Models.Issues>(global::GitHub.Models.Issues.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "timeline_url", n => { TimelineUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::GitHub.Models.IssueType>(global::GitHub.Models.IssueType.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::GitHub.Models.NullableSimpleUser>(global::GitHub.Models.NullableSimpleUser.CreateFromDiscriminatorValue); } },
@@ -346,6 +355,7 @@ namespace GitHub.Models
             writer.WriteCollectionOfObjectValues<global::GitHub.Models.Issues>("text_matches", TextMatches);
             writer.WriteStringValue("timeline_url", TimelineUrl);
             writer.WriteStringValue("title", Title);
+            writer.WriteObjectValue<global::GitHub.Models.IssueType>("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteStringValue("url", Url);
             writer.WriteObjectValue<global::GitHub.Models.NullableSimpleUser>("user", User);
