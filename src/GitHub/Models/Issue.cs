@@ -217,6 +217,14 @@ namespace GitHub.Models
 #else
         public string Title { get; set; }
 #endif
+        /// <summary>The type of issue.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::GitHub.Models.IssueType? Type { get; set; }
+#nullable restore
+#else
+        public global::GitHub.Models.IssueType Type { get; set; }
+#endif
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>URL for the issue</summary>
@@ -292,6 +300,7 @@ namespace GitHub.Models
                 { "sub_issues_summary", n => { SubIssuesSummary = n.GetObjectValue<global::GitHub.Models.SubIssuesSummary>(global::GitHub.Models.SubIssuesSummary.CreateFromDiscriminatorValue); } },
                 { "timeline_url", n => { TimelineUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::GitHub.Models.IssueType>(global::GitHub.Models.IssueType.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::GitHub.Models.NullableSimpleUser>(global::GitHub.Models.NullableSimpleUser.CreateFromDiscriminatorValue); } },
@@ -336,6 +345,7 @@ namespace GitHub.Models
             writer.WriteObjectValue<global::GitHub.Models.SubIssuesSummary>("sub_issues_summary", SubIssuesSummary);
             writer.WriteStringValue("timeline_url", TimelineUrl);
             writer.WriteStringValue("title", Title);
+            writer.WriteObjectValue<global::GitHub.Models.IssueType>("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteStringValue("url", Url);
             writer.WriteObjectValue<global::GitHub.Models.NullableSimpleUser>("user", User);
