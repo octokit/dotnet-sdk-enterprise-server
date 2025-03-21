@@ -66,7 +66,7 @@ namespace GitHub.Repos.Item.Item.Issues.Item
 #else
         public global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody.WithIssue_numberPatchRequestBody_title Title { get; set; }
 #endif
-        /// <summary>The name of the issue type to associate with this issue or use `null` to remove the current issue type.</summary>
+        /// <summary>The name of the issue type to associate with this issue or use `null` to remove the current issue type. Only users with push access can set the type for issues. Without push access to the repository, type changes are silently dropped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
