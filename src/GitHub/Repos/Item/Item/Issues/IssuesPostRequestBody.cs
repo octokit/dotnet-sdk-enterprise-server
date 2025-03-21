@@ -62,7 +62,7 @@ namespace GitHub.Repos.Item.Item.Issues
 #else
         public global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_title Title { get; set; }
 #endif
-        /// <summary>The name of the issue type to associate with this issue.</summary>
+        /// <summary>The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
