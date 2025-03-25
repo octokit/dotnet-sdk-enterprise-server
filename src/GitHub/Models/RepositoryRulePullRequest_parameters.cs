@@ -22,6 +22,8 @@ namespace GitHub.Models
 #else
         public List<global::GitHub.Models.RepositoryRulePullRequest_parameters_allowed_merge_methods?> AllowedMergeMethods { get; set; }
 #endif
+        /// <summary>&gt; [!NOTE]&gt; `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.</summary>
+        public bool? AutomaticCopilotCodeReviewEnabled { get; set; }
         /// <summary>New, reviewable commits pushed will dismiss previous pull request review approvals.</summary>
         public bool? DismissStaleReviewsOnPush { get; set; }
         /// <summary>Require an approving review in pull requests that modify files that have a designated code owner.</summary>
@@ -58,6 +60,7 @@ namespace GitHub.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allowed_merge_methods", n => { AllowedMergeMethods = n.GetCollectionOfEnumValues<global::GitHub.Models.RepositoryRulePullRequest_parameters_allowed_merge_methods>()?.AsList(); } },
+                { "automatic_copilot_code_review_enabled", n => { AutomaticCopilotCodeReviewEnabled = n.GetBoolValue(); } },
                 { "dismiss_stale_reviews_on_push", n => { DismissStaleReviewsOnPush = n.GetBoolValue(); } },
                 { "require_code_owner_review", n => { RequireCodeOwnerReview = n.GetBoolValue(); } },
                 { "require_last_push_approval", n => { RequireLastPushApproval = n.GetBoolValue(); } },
@@ -73,6 +76,7 @@ namespace GitHub.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::GitHub.Models.RepositoryRulePullRequest_parameters_allowed_merge_methods>("allowed_merge_methods", AllowedMergeMethods);
+            writer.WriteBoolValue("automatic_copilot_code_review_enabled", AutomaticCopilotCodeReviewEnabled);
             writer.WriteBoolValue("dismiss_stale_reviews_on_push", DismissStaleReviewsOnPush);
             writer.WriteBoolValue("require_code_owner_review", RequireCodeOwnerReview);
             writer.WriteIntValue("required_approving_review_count", RequiredApprovingReviewCount);
