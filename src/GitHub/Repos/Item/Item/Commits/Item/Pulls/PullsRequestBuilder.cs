@@ -34,7 +34,7 @@ namespace GitHub.Repos.Item.Item.Commits.Item.Pulls
         {
         }
         /// <summary>
-        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, will only return open pull requests associated with the commit.To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
+        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, it will return merged and open pull requests associated with the commit.To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
         /// API method documentation <see href="https://docs.github.com/enterprise-server@3.14/rest/commits/commits#list-pull-requests-associated-with-a-commit" />
         /// </summary>
         /// <returns>A List&lt;global::GitHub.Models.PullRequestSimple&gt;</returns>
@@ -59,7 +59,7 @@ namespace GitHub.Repos.Item.Item.Commits.Item.Pulls
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, will only return open pull requests associated with the commit.To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
+        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, it will return merged and open pull requests associated with the commit.To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +87,7 @@ namespace GitHub.Repos.Item.Item.Commits.Item.Pulls
             return new global::GitHub.Repos.Item.Item.Commits.Item.Pulls.PullsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, will only return open pull requests associated with the commit.To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
+        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, it will return merged and open pull requests associated with the commit.To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class PullsRequestBuilderGetQueryParameters 
