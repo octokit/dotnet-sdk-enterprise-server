@@ -16,7 +16,7 @@ namespace GitHub.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether GitHub-owned actions are allowed. For example, this includes the actions in the `actions` organization.</summary>
         public bool? GithubOwnedAllowed { get; set; }
-        /// <summary>Specifies a list of string-matching patterns to allow specific action(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.</summary>
+        /// <summary>Specifies a list of string-matching patterns to allow specific action(s) and reusable workflow(s). Wildcards, tags, and SHAs are allowed. For example, `monalisa/octocat@*`, `monalisa/octocat@v2`, `monalisa/*`.&gt; [!NOTE]&gt; The `patterns_allowed` setting only applies to public repositories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PatternsAllowed { get; set; }
@@ -24,6 +24,8 @@ namespace GitHub.Models
 #else
         public List<string> PatternsAllowed { get; set; }
 #endif
+        /// <summary>Whether actions from GitHub Marketplace verified creators are allowed. Set to `true` to allow all actions by GitHub Marketplace verified creators using GitHub Connect.</summary>
+        public bool? VerifiedAllowed { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Models.SelectedActions"/> and sets the default values.
         /// </summary>
@@ -51,6 +53,7 @@ namespace GitHub.Models
             {
                 { "github_owned_allowed", n => { GithubOwnedAllowed = n.GetBoolValue(); } },
                 { "patterns_allowed", n => { PatternsAllowed = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "verified_allowed", n => { VerifiedAllowed = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -62,6 +65,7 @@ namespace GitHub.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("github_owned_allowed", GithubOwnedAllowed);
             writer.WriteCollectionOfPrimitiveValues<string>("patterns_allowed", PatternsAllowed);
+            writer.WriteBoolValue("verified_allowed", VerifiedAllowed);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
