@@ -41,6 +41,8 @@ namespace GitHub.Models
 #endif
         /// <summary>Whether the property is required.</summary>
         public bool? Required { get; set; }
+        /// <summary>Who can edit the values of the property</summary>
+        public global::GitHub.Models.CustomPropertySetPayload_values_editable_by? ValuesEditableBy { get; set; }
         /// <summary>The type of the value for the property</summary>
         public global::GitHub.Models.CustomPropertySetPayload_value_type? ValueType { get; set; }
         /// <summary>
@@ -73,6 +75,7 @@ namespace GitHub.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
                 { "value_type", n => { ValueType = n.GetEnumValue<global::GitHub.Models.CustomPropertySetPayload_value_type>(); } },
+                { "values_editable_by", n => { ValuesEditableBy = n.GetEnumValue<global::GitHub.Models.CustomPropertySetPayload_values_editable_by>(); } },
             };
         }
         /// <summary>
@@ -86,6 +89,7 @@ namespace GitHub.Models
             writer.WriteObjectValue<global::GitHub.Models.CustomPropertySetPayload.CustomPropertySetPayload_default_value>("default_value", DefaultValue);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("required", Required);
+            writer.WriteEnumValue<global::GitHub.Models.CustomPropertySetPayload_values_editable_by>("values_editable_by", ValuesEditableBy);
             writer.WriteEnumValue<global::GitHub.Models.CustomPropertySetPayload_value_type>("value_type", ValueType);
             writer.WriteAdditionalData(AdditionalData);
         }

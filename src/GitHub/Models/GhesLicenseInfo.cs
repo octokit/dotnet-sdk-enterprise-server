@@ -28,7 +28,7 @@ namespace GitHub.Models
 #else
         public string Company { get; set; }
 #endif
-        /// <summary>Whether the Github Connect feature is enabled.</summary>
+        /// <summary>Whether the GitHub Connect feature is enabled.</summary>
         public bool? CroquetSupport { get; set; }
         /// <summary>Whether this license is issued under custom terms.</summary>
         public bool? CustomTerms { get; set; }

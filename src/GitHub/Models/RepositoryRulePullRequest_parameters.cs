@@ -14,14 +14,8 @@ namespace GitHub.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? AllowedMergeMethods { get; set; }
-#nullable restore
-#else
-        public List<string> AllowedMergeMethods { get; set; }
-#endif
+        /// <summary>&gt; [!NOTE]&gt; `automatic_copilot_code_review_enabled` is in beta and subject to change.Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.</summary>
+        public bool? AutomaticCopilotCodeReviewEnabled { get; set; }
         /// <summary>New, reviewable commits pushed will dismiss previous pull request review approvals.</summary>
         public bool? DismissStaleReviewsOnPush { get; set; }
         /// <summary>Require an approving review in pull requests that modify files that have a designated code owner.</summary>
@@ -57,7 +51,7 @@ namespace GitHub.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_merge_methods", n => { AllowedMergeMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "automatic_copilot_code_review_enabled", n => { AutomaticCopilotCodeReviewEnabled = n.GetBoolValue(); } },
                 { "dismiss_stale_reviews_on_push", n => { DismissStaleReviewsOnPush = n.GetBoolValue(); } },
                 { "require_code_owner_review", n => { RequireCodeOwnerReview = n.GetBoolValue(); } },
                 { "require_last_push_approval", n => { RequireLastPushApproval = n.GetBoolValue(); } },
@@ -72,7 +66,7 @@ namespace GitHub.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("allowed_merge_methods", AllowedMergeMethods);
+            writer.WriteBoolValue("automatic_copilot_code_review_enabled", AutomaticCopilotCodeReviewEnabled);
             writer.WriteBoolValue("dismiss_stale_reviews_on_push", DismissStaleReviewsOnPush);
             writer.WriteBoolValue("require_code_owner_review", RequireCodeOwnerReview);
             writer.WriteIntValue("required_approving_review_count", RequiredApprovingReviewCount);

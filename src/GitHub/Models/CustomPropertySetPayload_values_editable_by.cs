@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace GitHub.Models
 {
-    /// <summary>The level of permission to grant the access token to manage Dependabot secrets.</summary>
+    /// <summary>Who can edit the values of the property</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
-    public enum AppPermissions_dependabot_secrets
+    public enum CustomPropertySetPayload_values_editable_by
     {
-        [EnumMember(Value = "read")]
+        [EnumMember(Value = "org_actors")]
         #pragma warning disable CS1591
-        Read,
+        Org_actors,
         #pragma warning restore CS1591
-        [EnumMember(Value = "write")]
+        [EnumMember(Value = "org_and_repo_actors")]
         #pragma warning disable CS1591
-        Write,
+        Org_and_repo_actors,
         #pragma warning restore CS1591
     }
 }

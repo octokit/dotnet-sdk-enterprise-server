@@ -25,7 +25,7 @@ namespace GitHub.Models
         public global::GitHub.Models.AppPermissions_codespaces? Codespaces { get; set; }
         /// <summary>The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.</summary>
         public global::GitHub.Models.AppPermissions_contents? Contents { get; set; }
-        /// <summary>The leve of permission to grant the access token to manage Dependabot secrets.</summary>
+        /// <summary>The level of permission to grant the access token to manage Dependabot secrets.</summary>
         public global::GitHub.Models.AppPermissions_dependabot_secrets? DependabotSecrets { get; set; }
         /// <summary>The level of permission to grant the access token for deployments and deployment statuses.</summary>
         public global::GitHub.Models.AppPermissions_deployments? Deployments { get; set; }

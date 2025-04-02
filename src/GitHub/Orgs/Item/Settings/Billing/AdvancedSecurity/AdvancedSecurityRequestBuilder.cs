@@ -22,7 +22,7 @@ namespace GitHub.Orgs.Item.Settings.Billing.AdvancedSecurity
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdvancedSecurityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org}/settings/billing/advanced-security{?page*,per_page*}", pathParameters)
+        public AdvancedSecurityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org}/settings/billing/advanced-security{?advanced_security_product*,page*,per_page*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace GitHub.Orgs.Item.Settings.Billing.AdvancedSecurity
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdvancedSecurityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org}/settings/billing/advanced-security{?page*,per_page*}", rawUrl)
+        public AdvancedSecurityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org}/settings/billing/advanced-security{?advanced_security_product*,page*,per_page*}", rawUrl)
         {
         }
         /// <summary>
@@ -86,6 +86,9 @@ namespace GitHub.Orgs.Item.Settings.Billing.AdvancedSecurity
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class AdvancedSecurityRequestBuilderGetQueryParameters 
         {
+            /// <summary>The security feature to get GitHub Advanced Security active committers for.</summary>
+            [QueryParameter("advanced_security_product")]
+            public global::GitHub.Orgs.Item.Settings.Billing.AdvancedSecurity.GetAdvanced_security_productQueryParameterType? AdvancedSecurityProduct { get; set; }
             /// <summary>The page number of the results to fetch. For more information, see &quot;[Using pagination in the REST API](https://docs.github.com/enterprise-server@3.14/rest/using-the-rest-api/using-pagination-in-the-rest-api).&quot;</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
