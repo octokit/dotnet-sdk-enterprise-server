@@ -62,6 +62,14 @@ namespace GitHub.Repos.Item.Item.Issues
 #else
         public global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_title Title { get; set; }
 #endif
+        /// <summary>The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -93,6 +101,7 @@ namespace GitHub.Repos.Item.Item.Issues
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_milestone>(global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_milestone.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_title>(global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_title.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -108,6 +117,7 @@ namespace GitHub.Repos.Item.Item.Issues
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
             writer.WriteObjectValue<global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_milestone>("milestone", Milestone);
             writer.WriteObjectValue<global::GitHub.Repos.Item.Item.Issues.IssuesPostRequestBody.IssuesPostRequestBody_title>("title", Title);
+            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

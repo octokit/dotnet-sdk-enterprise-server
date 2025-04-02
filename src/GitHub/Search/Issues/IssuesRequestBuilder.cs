@@ -22,7 +22,7 @@ namespace GitHub.Search.Issues
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IssuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search/issues?q={q}{&order*,page*,per_page*,sort*}", pathParameters)
+        public IssuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search/issues?q={q}{&advanced_search*,order*,page*,per_page*,sort*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace GitHub.Search.Issues
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IssuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search/issues?q={q}{&order*,page*,per_page*,sort*}", rawUrl)
+        public IssuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search/issues?q={q}{&advanced_search*,order*,page*,per_page*,sort*}", rawUrl)
         {
         }
         /// <summary>
@@ -95,6 +95,16 @@ namespace GitHub.Search.Issues
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
         public partial class IssuesRequestBuilderGetQueryParameters 
         {
+            /// <summary>Set to `true` to use advanced search.Example: `http://api.github.com/search/issues?q={query}&amp;advanced_search=true`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("advanced_search")]
+            public string? AdvancedSearch { get; set; }
+#nullable restore
+#else
+            [QueryParameter("advanced_search")]
+            public string AdvancedSearch { get; set; }
+#endif
             /// <summary>Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.</summary>
             [QueryParameter("order")]
             public global::GitHub.Search.Issues.GetOrderQueryParameterType? Order { get; set; }
