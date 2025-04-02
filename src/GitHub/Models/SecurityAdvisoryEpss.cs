@@ -8,33 +8,33 @@ using System;
 namespace GitHub.Models
 {
     /// <summary>
-    /// Check Dependabot security updates
+    /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
-    public partial class CheckAutomatedSecurityFixes : IAdditionalDataHolder, IParsable
+    public partial class SecurityAdvisoryEpss : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether Dependabot security updates are enabled for the repository.</summary>
-        public bool? Enabled { get; set; }
-        /// <summary>Whether Dependabot security updates are paused for the repository.</summary>
-        public bool? Paused { get; set; }
+        /// <summary>The percentage property</summary>
+        public double? Percentage { get; set; }
+        /// <summary>The percentile property</summary>
+        public double? Percentile { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::GitHub.Models.CheckAutomatedSecurityFixes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Models.SecurityAdvisoryEpss"/> and sets the default values.
         /// </summary>
-        public CheckAutomatedSecurityFixes()
+        public SecurityAdvisoryEpss()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::GitHub.Models.CheckAutomatedSecurityFixes"/></returns>
+        /// <returns>A <see cref="global::GitHub.Models.SecurityAdvisoryEpss"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::GitHub.Models.CheckAutomatedSecurityFixes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::GitHub.Models.SecurityAdvisoryEpss CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::GitHub.Models.CheckAutomatedSecurityFixes();
+            return new global::GitHub.Models.SecurityAdvisoryEpss();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,8 +44,8 @@ namespace GitHub.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "paused", n => { Paused = n.GetBoolValue(); } },
+                { "percentage", n => { Percentage = n.GetDoubleValue(); } },
+                { "percentile", n => { Percentile = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -55,8 +55,8 @@ namespace GitHub.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteBoolValue("paused", Paused);
+            writer.WriteDoubleValue("percentage", Percentage);
+            writer.WriteDoubleValue("percentile", Percentile);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

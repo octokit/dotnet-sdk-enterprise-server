@@ -8,28 +8,30 @@ using System;
 namespace GitHub.Models
 {
     /// <summary>
-    /// A self hosted runner
+    /// The type of issue.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
-    public partial class Runner : IAdditionalDataHolder, IParsable
+    public partial class IssueType : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The busy property</summary>
-        public bool? Busy { get; set; }
-        /// <summary>The ephemeral property</summary>
-        public bool? Ephemeral { get; set; }
-        /// <summary>The ID of the runner.</summary>
-        public int? Id { get; set; }
-        /// <summary>The labels property</summary>
+        /// <summary>The color of the issue type.</summary>
+        public global::GitHub.Models.IssueType_color? Color { get; set; }
+        /// <summary>The time the issue type created.</summary>
+        public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>The description of the issue type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::GitHub.Models.RunnerLabel>? Labels { get; set; }
+        public string? Description { get; set; }
 #nullable restore
 #else
-        public List<global::GitHub.Models.RunnerLabel> Labels { get; set; }
+        public string Description { get; set; }
 #endif
-        /// <summary>The name of the runner.</summary>
+        /// <summary>The unique identifier of the issue type.</summary>
+        public int? Id { get; set; }
+        /// <summary>The enabled state of the issue type.</summary>
+        public bool? IsEnabled { get; set; }
+        /// <summary>The name of the issue type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -37,40 +39,32 @@ namespace GitHub.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The Operating System of the runner.</summary>
+        /// <summary>The node identifier of the issue type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Os { get; set; }
+        public string? NodeId { get; set; }
 #nullable restore
 #else
-        public string Os { get; set; }
+        public string NodeId { get; set; }
 #endif
-        /// <summary>The ID of the runner group.</summary>
-        public int? RunnerGroupId { get; set; }
-        /// <summary>The status of the runner.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Status { get; set; }
-#nullable restore
-#else
-        public string Status { get; set; }
-#endif
+        /// <summary>The time the issue type last updated.</summary>
+        public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::GitHub.Models.Runner"/> and sets the default values.
+        /// Instantiates a new <see cref="global::GitHub.Models.IssueType"/> and sets the default values.
         /// </summary>
-        public Runner()
+        public IssueType()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::GitHub.Models.Runner"/></returns>
+        /// <returns>A <see cref="global::GitHub.Models.IssueType"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::GitHub.Models.Runner CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::GitHub.Models.IssueType CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::GitHub.Models.Runner();
+            return new global::GitHub.Models.IssueType();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,14 +74,14 @@ namespace GitHub.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "busy", n => { Busy = n.GetBoolValue(); } },
-                { "ephemeral", n => { Ephemeral = n.GetBoolValue(); } },
+                { "color", n => { Color = n.GetEnumValue<global::GitHub.Models.IssueType_color>(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "labels", n => { Labels = n.GetCollectionOfObjectValues<global::GitHub.Models.RunnerLabel>(global::GitHub.Models.RunnerLabel.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "is_enabled", n => { IsEnabled = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "os", n => { Os = n.GetStringValue(); } },
-                { "runner_group_id", n => { RunnerGroupId = n.GetIntValue(); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "node_id", n => { NodeId = n.GetStringValue(); } },
+                { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -97,14 +91,14 @@ namespace GitHub.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("busy", Busy);
-            writer.WriteBoolValue("ephemeral", Ephemeral);
+            writer.WriteEnumValue<global::GitHub.Models.IssueType_color>("color", Color);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteStringValue("description", Description);
             writer.WriteIntValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::GitHub.Models.RunnerLabel>("labels", Labels);
+            writer.WriteBoolValue("is_enabled", IsEnabled);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("os", Os);
-            writer.WriteIntValue("runner_group_id", RunnerGroupId);
-            writer.WriteStringValue("status", Status);
+            writer.WriteStringValue("node_id", NodeId);
+            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -66,6 +66,14 @@ namespace GitHub.Repos.Item.Item.Issues.Item
 #else
         public global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody.WithIssue_numberPatchRequestBody_title Title { get; set; }
 #endif
+        /// <summary>The name of the issue type to associate with this issue or use `null` to remove the current issue type. Only users with push access can set the type for issues. Without push access to the repository, type changes are silently dropped.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody"/> and sets the default values.
         /// </summary>
@@ -99,6 +107,7 @@ namespace GitHub.Repos.Item.Item.Issues.Item
                 { "state", n => { State = n.GetEnumValue<global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody_state>(); } },
                 { "state_reason", n => { StateReason = n.GetEnumValue<global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody_state_reason>(); } },
                 { "title", n => { Title = n.GetObjectValue<global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody.WithIssue_numberPatchRequestBody_title>(global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody.WithIssue_numberPatchRequestBody_title.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -116,6 +125,7 @@ namespace GitHub.Repos.Item.Item.Issues.Item
             writer.WriteEnumValue<global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody_state>("state", State);
             writer.WriteEnumValue<global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody_state_reason>("state_reason", StateReason);
             writer.WriteObjectValue<global::GitHub.Repos.Item.Item.Issues.Item.WithIssue_numberPatchRequestBody.WithIssue_numberPatchRequestBody_title>("title", Title);
+            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
